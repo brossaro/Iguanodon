@@ -27,3 +27,46 @@
     width: 3.25rem;
     height: 3.25rem;
 }
+
+.playlist span {
+    display:  block; 
+    
+    font-size:  1rem;
+    margin-left: 20px;     
+   }   
+   
+   .playlist :before, :after{
+     display: block;
+     content: "";
+     position: absolute;
+   }
+   
+   
+   .play, .pause{
+     width: 1.5rem;
+     height: 1.5rem;
+     clear:  both;
+   }
+   
+   .play:before {
+     border-top: 0.375rem solid transparent;
+     border-bottom: 0.375rem solid transparent;
+     border-left: 0.625rem solid #14bf98;
+     margin: 0.375rem 0 0 0.5rem;
+   }
+   
+   
+   
+   .pause:before {
+     background: #14bf98;
+     margin: 0.4375rem 0.125rem 0 0.4375rem;
+     width: 0.25rem;
+     height: 0.625rem;
+   }
+   
+   .pause:after {
+     background: #14bf98;
+     margin: 0.4375rem 0.125rem 0 0.8125rem;
+     width: 0.25rem;
+     height: 0.625rem;
+   }

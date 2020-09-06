@@ -359,4 +359,28 @@
 		$(this).blur();
 	});
 
+
+
 })(jQuery);
+
+$(function() {
+    $("audio + a").click(function(e) {
+      e.preventDefault();
+      var song = $(this).prev('audio').get(0);
+      
+      if (song.paused) {
+        song.play();
+        $(this).addClass("pause");
+        $(this).removeClass("play");
+      } 
+      else {
+        song.pause();
+        $(this).addClass("play");
+        $(this).removeClass("pause");
+      }
+    });
+  });
+
+  var today = new Date();
+  $("#currentYear").html(today.getFullYear())
+

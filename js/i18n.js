@@ -1,4 +1,4 @@
-var nextLang = "fr"
+var nextLang = "en"
 
 i18next.init({
   lng: 'en',
@@ -11,7 +11,8 @@ i18next.init({
         "bio": "BIO",
         "contact": "CONTACT",
         "lang":"FR",
-        "buyTheAlbum": "Buy Digital Album"
+        "buyTheAlbum": "Buy Digital Album",
+        "follow": "Follow Mike Lemaire On Social Media"
       }
     },
     fr: {
@@ -21,16 +22,17 @@ i18next.init({
           "bio": "BIO",
           "contact": "CONTACT",
           "lang": "EN",
-          "buyTheAlbum": "Acheter l'album numérique"
+          "buyTheAlbum": "Acheter l'album numérique",
+          "follow": "Suivez Mike Lemaire sur les médias sociaux"
         }
     }
   }
 }, function(err, t) {
     jqueryI18next.init(i18next, $);
-    $('.i18n').localize();
-
-    $("#lang-link").click(function() {
-        
+    $('.i18n').localize();  
+    
+    $("#lang-link").click(function() {     
+    
         if (nextLang === "en") {
             nextLang = "fr";
         }
@@ -41,3 +43,4 @@ i18next.init({
         $('.i18n').localize();
     });
 });
+
